@@ -48,6 +48,11 @@ $ npm install
 # Build the Docker image and run it in detached mode
 $ cd ..
 $ docker-compose up --detach
+
+# If you get error /usr/bin/env: 'bash\r': No such file or directory in your web docker:
+$ git config core.autocrlf false 
+$ git rm --cached -r . 
+$ git reset --hard
 ```
 
 The docker-compose.yml file contains all the configuration needed to have a running instance of Horas.
